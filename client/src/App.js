@@ -3,6 +3,7 @@ import './App.css';
 import {
   createBrowserRouter,
   RouterProvider,
+  Outlet
 } from "react-router-dom";
 import Home from './pages/Home/home';
 import Products from './pages/Products/products';
