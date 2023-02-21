@@ -27,5 +27,11 @@
    align-items: center;
    gap:25px;
   }
+  .icons{
+    display: flex;
+    gap:15px;
+    color:#777;
+    cursor:pointer;
+  }
 
 }
