@@ -32,6 +32,20 @@
     gap:15px;
     color:#777;
     cursor:pointer;
+    .cartIcon{
+      position: relative;
+      span{
+        font-size:12px;
+        height:20px;
+        width:20px;
+        border-radius: 50%;
+        background-color: #2878fe;
+        color:#fff;
+        position:absolute;
+        right:-10px;
+        top:-10px;
+      }
+    }
   }
 
 }
