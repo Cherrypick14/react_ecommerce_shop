@@ -10,14 +10,42 @@
             flex-direction: column;
             gap:10px;
             text-align: justify;
+            font-size: 14px;
+
+            h1{
+                font-size:18px;
+                font-weight: 500;
+                color:#555;
+            }
         }
     }
     .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+
         .left{
-          
+          display: flex;
+          align-items: center;
+
+          .logo{
+            color:#2879fe;
+            font-size: 24px;
+            font-weight: bold;
+
+          }
+          .copyright{
+            margin-left: 20px;
+            font-size: 12px;
+            color:gray;
+          }
         }
         .right{
-
+           
+            img{
+                height:50px;
+            }
         }
     }
 }
