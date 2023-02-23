@@ -1,9 +1,10 @@
 import React from 'react'
+import "../../styles/products.scss"
 
 const Products = () => {
   return (
-    <div>products</div>
+    <div className='products'>products</div>
   )
 }
 
-export default Products
+export default Products;
