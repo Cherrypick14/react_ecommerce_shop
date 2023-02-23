@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from '../../components/Slider/slider'
+import "../../styles/home.scss"
 
 
 const Home = () => {
@@ -10,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
