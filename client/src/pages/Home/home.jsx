@@ -9,6 +9,7 @@ const Home = () => {
     <div className='home'>
        <Slider />
        <Featuredproducts  type="featured"/>
+       <Featuredproducts  type="trending"/>
     </div>
   )
 }
