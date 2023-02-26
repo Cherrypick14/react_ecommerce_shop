@@ -31,7 +31,7 @@ const Featuredproducts = ({type}) => {
    },
    {
     id:4,
-    img:"https://unsplash.com/photos/ndN00KmbJ1c",
+    img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fke%2Fmfangano-island-lodge.html&psig=AOvVaw0Q0GCPiNYp9hByR9gWX4ut&ust=1677533368309000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLDD_vaQtP0CFQAAAAAdAAAAABAE",
     title:'We good',
     isNew:true,
     oldPrice:19,
