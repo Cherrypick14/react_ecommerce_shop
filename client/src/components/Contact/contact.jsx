@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="wrapper">
             <span>Join our newsletter</span>
              <div className="mail">
-                 <input type="text" placeholder='enter your email address' />
+                 <input type="text" placeholder='enter your email address...' />
                  <button>JOIN US</button>
              </div>
              <div className="icons">
