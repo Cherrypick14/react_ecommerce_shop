@@ -7,8 +7,8 @@ const Featuredproducts = ({type}) => {
   const data  = [
    {
     id:1,
-    img:"https://images.pexels.com/photos/852860/pexels-photo-852860.jpeg?auto=compress&cs=tinysrgb&w=400",
-    img2:"https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=400",
+    img:"https://images.pexels.com/photos/852860/pexels-photo-852860.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img2:"https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=800",
     title:'Long Sleeve',
     isNew:true,
     oldPrice:19,
@@ -16,7 +16,7 @@ const Featuredproducts = ({type}) => {
    },
    {
     id:2,
-    img:"https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=400",
+    img:"https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=800",
     title:'Duke style',
     isNew:true,
     oldPrice:19,
@@ -24,7 +24,7 @@ const Featuredproducts = ({type}) => {
    },
    {
     id:3,
-    img:"https://images.pexels.com/photos/2466756/pexels-photo-2466756.jpeg?auto=compress&cs=tinysrgb&w=400",
+    img:"https://images.pexels.com/photos/2466756/pexels-photo-2466756.jpeg?auto=compress&cs=tinysrgb&w=800",
     title:'Glasses',
     isNew:true,
     oldPrice:19,
@@ -32,7 +32,7 @@ const Featuredproducts = ({type}) => {
    },
    {
     id:4,
-    img:"https://images.pexels.com/photos/3317434/pexels-photo-3317434.jpeg?auto=compress&cs=tinysrgb&w=400",
+    img:"https://images.pexels.com/photos/3317434/pexels-photo-3317434.jpeg?auto=compress&cs=tinysrgb&w=800",
     title:'hat',
     isNew:true,
     oldPrice:19,
