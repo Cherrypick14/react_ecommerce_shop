@@ -6,9 +6,9 @@ import "../../styles/products.scss"
 const Products = () => {
   const catId = parseInt(useParams().id) ;
 
-  const[maxPrice, setMaxPrice] = useState(1000)
+  const[maxPrice, setMaxPrice] = useState(1000);
 
-  const[sort, setSort] = null();
+  const[sort, setSort] = useState(null);
     
   return (
     <div className='products'>
@@ -53,7 +53,7 @@ const Products = () => {
         </div>
         <div className="right">
            <img className ="catImg"
-           src="https://images.pexels.com/photos/4591254/pexels-photo-4591254.jpeg?auto=compress&cs=tinysrgb&w=400" 
+           src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=800" 
            alt="" />
              <List catId={catId} maxPrice={maxPrice} sort={sort} />
         </div>
