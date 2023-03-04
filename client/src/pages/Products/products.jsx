@@ -1,4 +1,5 @@
 import React from 'react'
+import List from '../../components/List/list';
 import "../../styles/products.scss"
 
 const Products = () => {
@@ -43,7 +44,12 @@ const Products = () => {
                 </div>
            </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+           <img className ="catImg"
+           src="https://images.pexels.com/photos/4591254/pexels-photo-4591254.jpeg?auto=compress&cs=tinysrgb&w=400" 
+           alt="" />
+             <List />
+        </div>
     </div>
   )
 }
