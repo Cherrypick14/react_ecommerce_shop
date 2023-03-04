@@ -1,35 +1,37 @@
 .contact{
     background:#372772;
-    padding:2rem;
-    height:30px;
+    color:white;
+    padding:.9375rem;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
 
     .wrapper{
-        display:flex;
-        justify-content:space-evenly;
-        // margin-bottom:5rem;
-      span{
-    color:white;
-      }
+      width:55%;
+      display:flex;
+      align-items: center;
+      justify-content:space-between;
+       
       .mail{
          input{
-             padding:.5rem 2rem;
+            padding:10px;
              border:none;
+             border-radius:5px 0 0 5px;
 
          }
 
          button{
-             height:30px;
-             width:40px;
-             padding:.5rem 2rem;
-             font-weight:400 ;
-             font-size:12px;
-             background:aqua;
+            padding:10px;
+            color:white;
+            background:#333;
+            border-radius: 0 5px 5px 0;
+            border:none;
          }
       }
 
       .icons{
-      color:white;
-      padding:1rem 2rem;
+      display: flex;
+      gap:10px;
 
       }
     }
