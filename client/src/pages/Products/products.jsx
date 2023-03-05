@@ -8,7 +8,7 @@ const Products = () => {
 
   const[maxPrice, setMaxPrice] = useState(1000)
 
-  const[sort, setSort] = null();
+  const[sort, setSort] = useState(null);
     
   return (
     <div className='products'>
