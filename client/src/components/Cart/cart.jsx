@@ -40,6 +40,14 @@ const Cart = () => {
          )
        )}
        
+     <div className="total">
+       <span>SUBTOTAL</span>
+       <span>$200</span>
+     </div>
+
+     <button>CHECKOUT </button>
+
+     <span className='reset'>Reset Cart</span>
 
 
     </div>
