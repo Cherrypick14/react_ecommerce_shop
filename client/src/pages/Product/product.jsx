@@ -62,7 +62,7 @@ const Product = () => {
 
      </div>
    <hr/>
-     <div className="details">
+     <div className="details" style={{marginTop:"30px"}}>
         <span>Description</span>
 
         <hr/>
