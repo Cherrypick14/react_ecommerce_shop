@@ -61,7 +61,7 @@ const Product = () => {
        <span>Tag: Men, women, p-neck </span>
 
      </div>
-
+   <hr/>
      <div className="details">
         <span>Description</span>
 
