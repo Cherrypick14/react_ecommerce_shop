@@ -6,43 +6,8 @@ import axios from "axios";
 
 const Featuredproducts = ({type}) => {
 
-  const data  = [
-   {
-    id:1,
-    img:"https://images.pexels.com/photos/852860/pexels-photo-852860.jpeg?auto=compress&cs=tinysrgb&w=800",
-    img2:"https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title:'Long Sleeve',
-    isNew:true,
-    oldPrice:19,
-    price:12,
-   },
-   {
-    id:2,
-    img:"https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title:'Duke style',
-    isNew:true,
-    oldPrice:19,
-    price:12,
-   },
-   {
-    id:3,
-    img:"https://images.pexels.com/photos/2466756/pexels-photo-2466756.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title:'Glasses',
-    isNew:true,
-    oldPrice:19,
-    price:12,
-   },
-   {
-    id:4,
-    img:"https://images.pexels.com/photos/3317434/pexels-photo-3317434.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title:'hat',
-    isNew:true,
-    oldPrice:19,
-    price:12,
-   },
-  ] ;
 
-  const [products, setProducts] = useState([]) ;
+  const [data, setData] = useState([]) ;
 
 
   useEffect(() => {
@@ -51,7 +16,7 @@ const Featuredproducts = ({type}) => {
      
       try {
 
-        const data = await axios.get(process.env.REACT_APP_API_URL +"/products",
+        const res = await axios.get(process.env.REACT_APP_API_URL +`/products?populate=*&filters[type][$eq]=${type}`,
           
         {
           headers:{
@@ -61,7 +26,7 @@ const Featuredproducts = ({type}) => {
       
         });
 
-         console.log(data);
+         setData(res.data.data);
 
       } catch (err) {
         console.log(err);
@@ -69,7 +34,7 @@ const Featuredproducts = ({type}) => {
     };
      fetchData();
   }, []);
-  
+console.log(data)
   return (
     <div className='featuredproducts'>
          <div className="top">
