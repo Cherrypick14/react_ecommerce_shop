@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../../styles/featuredproducts.scss";
 import Card from '../Card/card';
-import axios from 'axios';
+import axios from "axios";
+
 
 const Featuredproducts = ({type}) => {
 
@@ -40,21 +41,27 @@ const Featuredproducts = ({type}) => {
     price:12,
    },
   ] ;
+
   const [products, setProducts] = useState([]) ;
 
+
   useEffect(() => {
+    
     const fetchData = async () => {
+     
       try {
 
-        const data = await axios.get(process.env.REACT_APP_API_URL + "/products",
-        
+        const data = await axios.get(process.env.REACT_APP_API_URL+"/products",
+          
         {
           headers:{
-            Authorization: "bearer" + process.env.REACT_APP_API_TOKEN,
-          } 
+            Authorization:"bearer" + process.env.REACT_APP_API_TOKEN,
+          },
+      
         });
 
          console.log(data);
+
       } catch (err) {
         console.log(err);
       }
