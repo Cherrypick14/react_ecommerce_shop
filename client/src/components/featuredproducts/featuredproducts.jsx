@@ -51,11 +51,12 @@ const Featuredproducts = ({type}) => {
      
       try {
 
-        const data = await axios.get(process.env.REACT_APP_API_URL+"/products",
+        const data = await axios.get(process.env.REACT_APP_API_URL +"/products",
           
         {
           headers:{
-            Authorization:"bearer" + process.env.REACT_APP_API_TOKEN,
+        
+            Authorization:`Bearer ${process.env.REACT_APP_API_TOKEN}`,
           },
       
         });
