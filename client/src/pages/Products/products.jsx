@@ -11,10 +11,19 @@ const Products = () => {
 
   const[sort, setSort] = useState(null);
 
+  const[subcateg, selectSubCateg] = useState([])
+
   const{data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
   
-  console.log(data)
+  const handleChange = (e)=>{
+    const value = e.target.value;
+    const isChecked = e.target.checked;
 
+    selectSubCateg(isChecked ? [...subcateg, value ] :
+
+      subcateg.filter((item)=> item !== value));
+  }
+   console.log(subcateg);
   return (
     <div className='products'>
         <div className="left">
@@ -23,7 +32,7 @@ const Products = () => {
 
               {data?.map((item) =>(
                <div className="inputItem" key={item.id}>
-               <input type="checkbox" id ={item.id} value={item.id} />
+               <input type="checkbox" id ={item.id} value={item.id} onChange={handleChange} />
                 <label htmlFor={item.id}>{item.attributes.title}</label>
             </div>
               ))}
@@ -56,7 +65,7 @@ const Products = () => {
            <img className ="catImg"
            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=800" 
            alt="" />
-             <List catId={catId} maxPrice={maxPrice} sort={sort} />
+             <List catId={catId} maxPrice={maxPrice} sort={sort} subCat={subcateg}/>
         </div>
     </div>
   )
