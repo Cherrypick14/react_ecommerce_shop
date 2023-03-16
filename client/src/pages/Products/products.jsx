@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
 import List from '../../components/List/list';
 import "../../styles/products.scss"
+import useFetch  from "../../hooks/useFetch";
 
 const Products = () => {
   const catId = parseInt(useParams().id) ;
@@ -9,24 +10,24 @@ const Products = () => {
   const[maxPrice, setMaxPrice] = useState(1000);
 
   const[sort, setSort] = useState(null);
-    
+
+  const{data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
+  
+  console.log(data)
+
   return (
     <div className='products'>
         <div className="left">
            <div className="filterItem">
              <h2>Product Categories</h2>
-               <div className="inputItem">
-                  <input type="checkbox" id ="1" value={1} />
-                   <label htmlFor="1">Shoes</label>
-               </div>
-               <div className="inputItem">
-                  <input type="checkbox" id ="2" value={2} />
-                   <label htmlFor="2">Bags</label>
-               </div>
-               <div className="inputItem">
-                  <input type="checkbox" id ="3" value={3} />
-                   <label htmlFor="3">Cardigans</label>
-               </div>
+
+              {data?.map((item) =>(
+               <div className="inputItem" key={item.id}>
+               <input type="checkbox" id ={item.id} value={item.id} />
+                <label htmlFor={item.id}>{item.attributes.title}</label>
+            </div>
+              ))}
+               
            </div>
            <div className="filterItem">
             <h2>Filter by price</h2>
