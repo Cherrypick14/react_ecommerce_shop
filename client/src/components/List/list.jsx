@@ -10,7 +10,7 @@ const List = ({catId,maxPrice,sort,subCat}) => {
 
     (item) =>`&[filters][sub_categories][id][$eq]=${item}`
     
-    )}&[filters][price][$lte]${maxPrice}`);   
+    )}&[filters][price][$lte]${maxPrice}&sort=price:${sort}`);   
   
   return (
     <div className='list'>
