@@ -23,7 +23,7 @@ const Products = () => {
 
       subcateg.filter((item)=> item !== value));
   }
-   console.log(subcateg);
+
   return (
     <div className='products'>
         <div className="left">
