@@ -9,6 +9,7 @@ const Products = () => {
 
   const[maxPrice, setMaxPrice] = useState(1000);
 
+//   const[sort, setSort] = useState("");
   const[sort, setSort] = useState("asc");
 
   const[subcateg, selectSubCateg] = useState([])
