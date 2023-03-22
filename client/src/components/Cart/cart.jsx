@@ -1,21 +1,36 @@
 import React from 'react'
 import "../../styles/cart.scss"
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-import {useSelector} from "react-redux"
+import {useSelector,useDispatch} from "react-redux";
+import useFetch  from "../../hooks/useFetch";
+import { useParams } from 'react-router-dom';
 
 const Cart = () => {
-  const products = useSelector(state =>state.cart.products)
+  const id = useParams().id
+  const products = useSelector(state =>state.cart.products);
+
+  const url = `/products/${id}?populate=*`;
+  const{data, loading, error} = useFetch(url) ;
+  const dispatch = useDispatch();
+
+  const subTotal = ()=>{
+    let total = 0 ;
+    products.forEach(item => {
+      total += item.quantity * item.price
+    });
+    return total.toFixed(2)
+  }
 
   return (
     <div className='cart'>
        <h1>Total items in your cart</h1>
        {products.map((item) => (
          <div className="items" key={item.id}>
-            <img src={item.img} alt="" />
+            <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" />
                <div className="details">
                   <h1>{item.title}</h1>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vel, veritatis voluptatum laborum, assumenda cum excepturi non ullam sunt possimus provident rerum. Animi neque, ullam sapiente distinctio quis asperiores ipsam.</p>
-                <div className="price">1 * {item.price}</div>
+                <div className="price">{item.quantity} * {item.price}</div>
           </div>
 
              <DeleteOutlinedIcon className='delete' />
@@ -26,7 +41,7 @@ const Cart = () => {
        
      <div className="total">
        <span>SUBTOTAL</span>
-       <span>$200</span>
+       <span>{subTotal()}</span>
      </div>
 
      <button>CHECKOUT </button>
