@@ -12,10 +12,12 @@ const Product = () => {
     const id = useParams().id
     const[selectedImg, setSelectedImg] = useState("img");  // initialize selectedImg state variable
     const[quantity, setQuantity] = useState(1);
+    
     const url = `/products/${id}?populate=*`;
     const{data, loading, error} = useFetch(url) ;
     const dispatch = useDispatch();
     
+  
   return (
     <div className ="product">
        {loading?("loading"):
@@ -34,9 +36,15 @@ const Product = () => {
                       />
                  </div>
                 <div className="mainImg">
-                 <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes[selectedImg]?.data?.attributes?.url}
-                alt=""
-               />
+                {data?.attributes[selectedImg]?.data?.attributes?.url ? (
+                <img
+                 src={process.env.REACT_APP_UPLOAD_URL + data?.attributes[selectedImg]?.data?.attributes?.url}
+                     alt=""
+              />
+             ) : (
+            <p>No image found</p>
+                  )}
+                
                 </div>
             </div>
         </div>
@@ -61,7 +69,7 @@ const Product = () => {
                   desc:data.attributes.desc,
                   price:data.attributes.price,
                   img:data.attributes.img.data.attributes.url,
-                  quantity
+                  quantity,
                })
              )}>
             
