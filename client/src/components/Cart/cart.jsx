@@ -4,6 +4,7 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import {useSelector,useDispatch} from "react-redux";
 import useFetch  from "../../hooks/useFetch";
 import { useParams } from 'react-router-dom';
+import {removeItem,resetCart} from '../../redux/cartReducer'
 
 const Cart = () => {
   const id = useParams().id
@@ -11,6 +12,7 @@ const Cart = () => {
 
   const url = `/products/${id}?populate=*`;
   const{data, loading, error} = useFetch(url) ;
+
   const dispatch = useDispatch();
 
   const subTotal = ()=>{
@@ -33,7 +35,7 @@ const Cart = () => {
                 <div className="price">{item.quantity} * {item.price}</div>
           </div>
 
-             <DeleteOutlinedIcon className='delete' />
+             <DeleteOutlinedIcon className='delete' onClick={()=> dispatch(removeItem(item.id))}/>
 
          </div>
          )
@@ -46,7 +48,7 @@ const Cart = () => {
 
      <button>CHECKOUT </button>
 
-     <span className='reset'>Reset Cart</span>
+     <span className='reset'onClick={()=>dispatch(resetCart())}>Reset Cart</span>
 
 
     </div>
