@@ -5,8 +5,9 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BalanceIcon from '@mui/icons-material/Balance';
 import useFetch  from "../../hooks/useFetch";
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import {addToCart} from '../../redux/cartReducer'
+
 
 const Product = () => {
     const id = useParams().id
@@ -17,6 +18,7 @@ const Product = () => {
     const{data, loading, error} = useFetch(url) ;
     const dispatch = useDispatch();
     
+   
   
   return (
     <div className ="product">
