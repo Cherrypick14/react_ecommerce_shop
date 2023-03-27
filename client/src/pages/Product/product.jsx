@@ -10,13 +10,13 @@ import {addToCart} from '../../redux/cartReducer'
 
 
 const Product = () => {
-    const id = useParams().id
+    const id = useParams().id;
     const[selectedImg, setSelectedImg] = useState("img");  // initialize selectedImg state variable
     const[quantity, setQuantity] = useState(1);
     
-    const url = `/products/${id}?populate=*`;
-    const{data, loading, error} = useFetch(url) ;
     const dispatch = useDispatch();
+    const{data, loading, error} = useFetch(`/products/${id}?populate=*`) ;
+  
     
    
   
