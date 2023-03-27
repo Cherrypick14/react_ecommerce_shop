@@ -5,6 +5,8 @@ import {useSelector,useDispatch} from "react-redux";
 import useFetch  from "../../hooks/useFetch";
 import { useParams } from 'react-router-dom';
 import {removeItem,resetCart} from '../../redux/cartReducer'
+import {makeRequest} from "../../makeRequest"
+import {loadStripe} from "@stripe/stripe-js"
 
 const Cart = () => {
   const id = useParams().id
@@ -22,9 +24,20 @@ const Cart = () => {
     });
     return total.toFixed(2)
   }
+  const stripePromise = loadStripe('pk_test_51MotQ2G3gUVndL3D1pZT7bX8Bt03ij0xuYDP7t3mAWvDQg3tBBQMyXzXlDao8GMDV7vReqX4bRHeYxraLpcZmxDU00I92RqHmD');
 
-  const handlePayment =async ()=>{
+  const handlePayment = async ()=>{
     try{
+
+    const stripe = await stripePromise
+
+    const res = await makeRequest.post('/orders',{
+      products
+    });
+
+     await stripe.redirectToCheckout({
+       sessionId: res.data.sessionId,
+     });
 
     }catch(err){
    console.log(err)
