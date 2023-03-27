@@ -11,10 +11,10 @@ module.exports = createCoreController('api::order.order',({strapi})=>({
       async create(ctx){
          const{products} = ctx.request.body;
          const lineItems = await Promise.all(  //we use promise all because we have more than one product
-          products.map(async (item)=>{
+          products.map(async (product)=>{
             const item = await strapi
             .service('api::product.product'
-            .findOne(item.id));
+            .findOne(product.id));
             return {
                 price_data:{
                     currency:"usd",
