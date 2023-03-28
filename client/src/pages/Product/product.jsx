@@ -22,25 +22,36 @@ const Product = () => {
   
   return (
     <div className ="product">
-       {loading?("loading"):
-       (<>
+       {loading?(
+         "loading"
+         ):
+       (
+       <>
         <div className="left">
             <div className="images">
                 <div className="images">
-                     <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url}
+                     <img 
+                     src={process.env.REACT_APP_UPLOAD_URL + 
+                         data?.attributes?.img?.data?.attributes?.url
+                        }
                      alt=""
-                  onClick={() => setSelectedImg("img")} // update selectedImg when clicked
+                  onClick={(e) => setSelectedImg("img")} // update selectedImg when clicked
                       />
 
-                     <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url}
+                     <img src=
+                     {process.env.REACT_APP_UPLOAD_URL + 
+                        data?.attributes?.img2?.data?.attributes?.url}
                      alt=""
-                     onClick={() => setSelectedImg("img2")} // update selectedImg when clicked
+                     onClick={(e) => setSelectedImg("img2")} // update selectedImg when clicked
                       />
                  </div>
                 <div className="mainImg">
                 {data?.attributes[selectedImg]?.data?.attributes?.url ? (
                 <img
-                 src={process.env.REACT_APP_UPLOAD_URL + data?.attributes[selectedImg]?.data?.attributes?.url}
+                 src=
+                 {process.env.REACT_APP_UPLOAD_URL + 
+                  data?.attributes[selectedImg]?.data?.attributes?.url
+               }
                      alt=""
               />
              ) : (
@@ -52,14 +63,18 @@ const Product = () => {
         </div>
         <div className="right">
         <h1>{data?.attributes?.title}</h1>
-            <span className='price'>{data?.attributes?.price}</span>
+            <span className='price'>${data?.attributes?.price}</span>
             <p>{data?.attributes?.desc}</p>
               <div className="quantity">
-                <button onClick={()=>setQuantity((prev)=> (prev === 1 ? 1 : prev- 1))}>-</button>
+                <button 
+                onClick={()=>
+                setQuantity((prev)=> (prev === 1 ? 1 : prev- 1))}>-</button>
 
                    {quantity}
 
-                <button onClick={()=>setQuantity((prev)=>prev + 1)}>+</button>
+                <button 
+                onClick={()=>
+                setQuantity((prev)=>prev + 1)}>+</button>
 
              </div>
 
