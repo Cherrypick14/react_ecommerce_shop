@@ -9,7 +9,7 @@ import "../../styles/contact.scss"
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div className='contact' id="contacts">
         <div className="wrapper">
             <span>BE IN TOUCH WITH US:</span>
              <div className="mail">
