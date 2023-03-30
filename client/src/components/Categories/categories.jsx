@@ -2,13 +2,16 @@ import React from 'react'
 import "../../styles/categories.scss"
 import { Link } from 'react-router-dom'
 
+import Divider from '../Divider/divider';
+
 const Categories = () => {
   return (
+
     <div className='categories'>
-        <h1 style={{marginTop:"80px"}}>Our Categories</h1>
+       
 
       <div className="col">
-        
+
         <div className="row">
           <img src="https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
            <button>
