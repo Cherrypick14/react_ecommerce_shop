@@ -4,6 +4,7 @@ import List from '../../components/List/list';
 import "../../styles/products.scss"
 import useFetch  from "../../hooks/useFetch";
 
+
 const Products = () => {
   const catId = parseInt(useParams().id) ;
 
