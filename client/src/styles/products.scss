@@ -1,6 +1,7 @@
 .products{
     display: flex;
     padding:30px 50px;
+    margin-top: 3rem;
 
     .left{
         flex:1;
@@ -12,8 +13,9 @@
             margin-bottom: 30px;
 
             h2{
-                font-weight: 400;
+                font-weight: 500;
                 margin-bottom: 30px;
+
             }
             
             .inputItem{
@@ -31,6 +33,7 @@
             height:300px;
             object-fit: cover;
             margin-bottom: 50px;
+            border-radius:0px 20px 0px 20px;
         }
     }
     
