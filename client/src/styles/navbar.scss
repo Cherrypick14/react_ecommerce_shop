@@ -1,5 +1,9 @@
 .navbar {
   height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 
   .wrapper {
     padding: 10px 30px;
@@ -11,16 +15,21 @@
       display: flex;
       align-items: center;
       font-size: 18px;
+
+      img{
+      width: 100%;
+      max-width: 200px;
+      height: 50px;
+      display: block;
+      border-radius: 50px;
+      margin-right:1.30em;
+      }
     }
 
     .left {
       display: flex;
       align-items: center;
       gap: 25px;
-    }
-    .center {
-      font-size: 30px;
-      letter-spacing: 2px;
     }
     .right {
       display: flex;
@@ -41,7 +50,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background-color: #2879fe;
+            background-color: #243B7F;
             color: white;
             position: absolute;
             right: -10px;
