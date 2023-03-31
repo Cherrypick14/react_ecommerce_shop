@@ -2,6 +2,7 @@
     padding:20px 50px;
     display:flex;
     gap:50px;
+    margin-top:5rem;
 
     .left{
         flex:1;
@@ -9,6 +10,11 @@
         gap:20px;
 
         .images{
+       display: flex;
+       gap:20px;
+        }
+
+        .smimages{
             flex:1;
 
             img{
@@ -17,6 +23,7 @@
               cursor:pointer;
               object-fit: cover;
               margin-bottom: 10px;
+              border-radius:0 20px 0 20px;
 
             }
         }
@@ -27,6 +34,7 @@
                 width:100%;
                 object-fit: cover;
                 max-height:500px;
+                border-radius:20px 0px 20px 0px;
             }
         }
     }
