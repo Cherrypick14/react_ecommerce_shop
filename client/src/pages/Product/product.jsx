@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import "../../styles/product.scss";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import BalanceIcon from '@mui/icons-material/Balance';
 import useFetch  from "../../hooks/useFetch";
 import { useParams } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
@@ -16,10 +15,7 @@ const Product = () => {
     
     const dispatch = useDispatch();
     const{data, loading, error} = useFetch(`/products/${id}?populate=*`) ;
-  
     
-   
-  
   return (
     <div className ="product">
        {loading?(
@@ -97,9 +93,7 @@ const Product = () => {
           <div className="item">
              <FavoriteBorderIcon /> ADD TO WISHLIST
           </div>
-          <div className="item">
-             <BalanceIcon /> COMPARE
-          </div>   
+       
       </div>
       <div className="info">
        <span>Vendor: Calvin</span>
