@@ -25,7 +25,7 @@ const Product = () => {
        <>
         <div className="left">
             <div className="images">
-                <div className="images">
+                <div className="smimages">
                      <img 
                      src={process.env.REACT_APP_UPLOAD_URL + 
                          data?.attributes?.img?.data?.attributes?.url
@@ -118,7 +118,7 @@ const Product = () => {
        }
 
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
