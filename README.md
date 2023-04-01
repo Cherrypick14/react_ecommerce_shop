@@ -1,4 +1,4 @@
-# The project was built with the folowing technologies:
+# The project was built with the following technologies:
 
 # Front-end- React
 # Back-end- Strapi
