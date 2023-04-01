@@ -41,7 +41,7 @@ module.exports = createCoreController('api::order.order',({strapi})=>({
           });
 
           await strapi
-          .service("api::order.order")
+          .entityService("api::order.order")
           .create({ data: {  products, stripeId: session.id } });
 
           return { stripeSession: session };
