@@ -1,1 +1,8 @@
-# react_ecommerce_shop
+# The project was built with the following technologies:
+
+1. Front-end- React
+2. Back-end- Strapi
+3. Payment-gateway - Stripe
+
+4. The demo can be found here :
+
