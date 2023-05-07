@@ -4,5 +4,8 @@
 2. Back-end- Strapi
 3. Payment-gateway - Stripe
 
-4. The demo can be found here :
+
+
+4. The Backend code: https://github.com/Cherrypick14/ecom-be
+
 
