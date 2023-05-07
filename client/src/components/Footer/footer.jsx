@@ -23,12 +23,12 @@ const Footer = () => {
           </div>
           <div className="item">
              <h1>About</h1>
-             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam vero asperiores doloribus animi iure sed qui necessitatibus, odit, beatae nesciunt voluptatum voluptates repellat omnis! Veritatis sed deserunt labore id rem.</span>
+             <span>Kiddostore is an innovative and unique ecommerce platform that caters to the needs of parents and the community at large.</span>
 
           </div>
           <div className="item">
           <h1>Contact</h1>
-             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam vero asperiores doloribus animi iure sed qui necessitatibus, odit, beatae nesciunt voluptatum voluptates repellat omnis! Veritatis sed deserunt labore id rem.</span>
+             <span>You can reach us by phone, email, or through our website's live chat feature. We strive to respond to all inquiries as quickly as possible.</span>
 
           </div>
        </div>
