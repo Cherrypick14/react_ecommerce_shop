@@ -5,3 +5,7 @@
 3. Payment-gateway - Stripe
 
 
+
+4. The Backend code: https://github.com/Cherrypick14/ecom-be
+
+
