@@ -42,7 +42,7 @@ const Slider = () => {
       <div className="container" style={{transform:`translateX(-${currentSlide * 100}vw)`,Position:"relative"}}>
         <div className="mystyletext" style={{position:"absolute"}}>
         <h1 ref ={textRef}></h1>
-        <p>Kiddostore is an ecommerce website that built to provide a seamless shopping experience for parents and guardians looking to buy kids' clothing, toys, and accessories</p>
+        <p>Kiddostore is a dynamic and inclusive ecommerce platform designed for parents and guardians seeking high-quality, affordable clothing, toys, and accessories for kids. </p>
         </div>
          
         <img src={data[0]} alt="" />
